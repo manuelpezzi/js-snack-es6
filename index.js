@@ -34,7 +34,18 @@ const squadreCalcio = [
     { nome: "Roma", punti: 0, falliSubiti: 0 }
 ];
 
-
+for (let x in squadreCalcio) {
+    squadreCalcio[x].punti = Math.floor(Math.random() * 100);
+    squadreCalcio[x].falliSubiti = Math.floor(Math.random() * 50);
+}
+const squadreCalcioPtFs = [];
+for (let x in squadreCalcio) {
+    squadreCalcioPtFs.push({
+        nome: squadreCalcio[x].nome,
+        falliSubiti: squadreCalcio[x].falliSubiti
+    })
+    console.log("Nomi e falli subiti:", squadreCalcioPtFs);
+};
 /*Snack 3 (Bonus)
 Scrivere una funzione che accetti tre argomenti, un array ( esempio: ['Michele', 'Fabio', 'Roberto', 'Giovanni', 'Simone', 'Chiara'] )e due numeri (a più piccolo di b).
 La funzione ritornerà un nuovo array con li elementi estratti dall'array di partenza che hanno la posizione compresa tra i due numeri (a e b).*/
